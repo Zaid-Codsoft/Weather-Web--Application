@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5-Day Temperature Forecast</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="sidebar">
+    <h2><img src="cloudy.png" width="100px" height="100px"></h2>
+   
+    <!-- <h2>Weather App</h2> -->
+    <nav>
+      <a href="index.html">Dashboard</a>
+      <a href="forecast.html" class="active">Forecast</a>
+    </nav>
+  </div>
+
+
+
+
+  <div class="main-content">
+    <h2>5-Day Temperature Forecast</h2>
+    
+
+
+
+
+    <div class="search-filter-container">
+      <input type="text" id="citySearch" placeholder="Enter city name" class="search-input" />
+      <button id="searchButton" class="btn">Search</button>
+    </div>
+
+
+
+
+
+    <div class="filter-container">
+      <button id="filterRain" class="btn">Filter Rainy Days</button>
+      <button id="highestTemp" class="btn">Show Highest Temp</button>
+      <button id="sortAsc" class="btn">Sort Ascending</button>
+      <button id="sortDesc" class="btn">Sort Descending</button>
+    </div>
+    <h3 id="searchedCity" style="display:none;"></h3> 
+
+
+
+
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Temperature</th>
+          <th>Humidity</th>
+          <th>Weather Condition</th>
+        </tr>
+      </thead>
+      <tbody id="forecastTableBody"></tbody>
+    </table>
+    
+
+
+
+
+    <div id="pagination">
+      <button id="prevPage" class="btn">Previous</button>
+      <span id="pageInfo"></span>
+      <button id="nextPage" class="btn">Next</button>
+    </div>
+    
+
+
+
+
+    <div id="chatContainer">
+      <h3>Chatbot</h3>
+      <div id="messages"></div>
+      <input type="text" id="userInput" placeholder="Type your message..." class="search-input" />
+      <button id="sendButton" class="btn">Send</button>
+    </div>
+  </div>
+
+  <script src="forecast.js"></script>
+  <script src="chatbot.js"></script>
+</body>
+</html>

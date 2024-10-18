@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beautiful Weather Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+
+
+
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2><img src="cloudy.png" width="100px" height="100px"></h2>
+    <nav>
+      <a href="#" class="active">Dashboard</a>
+      <a href="tables.html">Tables</a>
+    </nav>
+  </div>
+
+
+
+
+
+  <!-- Main Content -->
+
+
+  <div class="main-content">
+    <input type="text" id="searchBar" placeholder="Search for City..">
+
+
+
+
+
+<!-- Loading Spinner -->
+
+
+<div id="loadingSpinner" class="loading-spinner" style="display:none;">
+    <div class="spinner-border" role="status">
+      <span class="sr-only">Loading your Location...</span>
+    </div>
+  </div>
+  
+
+
+
+
+
+    <!-- Unit Toggle -->
+    <div class="unit-toggle">
+      <label>
+        <input type="radio" name="unit" value="metric" checked>Celsius
+      </label>
+      <label>
+        <input type="radio" name="unit" value="imperial">Fahrenheit
+      </label>
+    </div>
+
+
+
+
+
+
+
+    <!-- Weather Overview Section -->
+    <section class="weather-overview" id="weatherWidget">
+      <div class="temperature">
+        <h1 id="currentTemp">--°</h1>
+        <p id="weatherCondition">Condition</p>
+        <p id="dayNightTemp">Day --° • Night --°</p>
+        <p id="humidity">Humidity: --%</p>
+        <p id="windSpeed">Wind: --</p>
+      </div>
+      <div class="city-info">
+        <h3 id="cityName">City Name</h3>
+        <p id="lastUpdated">As of --:--</p>
+      </div>
+      <div class="weather-icon">
+        <img id="weatherIcon" src="" alt="Weather Icon" />
+      </div>
+    </section>
+
+
+
+
+
+
+
+    <!-- Forecast Table -->
+    <section class="forecast-table">
+      <h2>Today's Forecast</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Temperature</th>
+            <th>Icon</th>
+            <th>Precipitation</th>
+          </tr>
+        </thead>
+        <tbody id="forecastBody"></tbody>
+      </table>
+    </section>
+
+
+
+
+
+
+
+    
+    <!-- Charts Section -->
+    <section class="charts">
+      <div class="chart-container">
+        <canvas id="barChart"></canvas>
+      </div>
+      <div class="chart-container">
+        <canvas id="doughnutChart"></canvas>
+      </div>
+      <div class="chart-container">
+        <canvas id="lineChart"></canvas>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="weather.js"></script>
+</body>
+</html>
